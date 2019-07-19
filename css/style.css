@@ -1,0 +1,56 @@
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+.top-cover {
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  top: 0px;
+}
+
+.moving.transition {
+  transition: transform 0.75s cubic-bezier(0.13, 0.56, 0.34, 0.85);
+}
+
+.moved-top {
+  top: -100%;
+}
+
+.cover-image {
+  width: 300px;
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 20px;
+  font-size: 20px;
+}
+
+.pink-container {
+  background-color: rgb(255, 243, 243);
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.pink-logo {
+  padding: 35px 0 0 35px;
+  width: 150px;
+}
+
+.pink-descr-text {
+  position: absolute;
+  right: 75px;
+  bottom: 75px;
+  color: white;
+  font-size: 75px;
+}
