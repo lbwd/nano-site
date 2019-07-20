@@ -1,7 +1,6 @@
 {
-  "root": "/",
+  "root": "",
   "routes": {
-    "/assets/*": "/assets/",
     "/**": "index.html"
   }
 }
