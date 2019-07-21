@@ -54,3 +54,27 @@ body {
   color: white;
   font-size: 75px;
 }
+
+@media screen and (max-width: 600px) {
+  .cover-image {
+    width: 150px;
+  }
+
+  .bottom-text {
+    bottom: 10px;
+    font-size: 14px;
+  }
+
+  .pink-logo {
+    padding: 20px 0 0 20px;
+    width: 125px;
+  }
+
+  .pink-descr-text {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    color: white;
+    font-size: 30px;
+  }
+}
