@@ -1,25 +1,25 @@
-document
-  .getElementsByClassName('top-cover')[0]
-  .addEventListener('click', function(event) {
-    // document.getElementsByClassName('top-cover')[0].classList.add('moved-top');
-    let elem = document.getElementsByClassName('top-cover')[0];
-    let first = elem.getBoundingClientRect();
+document.getElementsByClassName('top-cover')[0].addEventListener('click', clickTransistion);
+document.getElementsByClassName('cover-image')[0].addEventListener('click', clickTransistion);
 
-    elem.classList.add('moving');
-    elem.classList.add('moved-top');
-    let last = elem.getBoundingClientRect();
+function clickTransistion(event) {
+  let elem = document.getElementsByClassName('top-cover')[0];
+  let first = elem.getBoundingClientRect();
 
-    let changeTop = first.top - last.top;
-    elem.style.transform = 'translateY(' + changeTop + 'px)';
+  elem.classList.add('moving');
+  elem.classList.add('moved-top');
+  let last = elem.getBoundingClientRect();
 
-    requestAnimationFrame(function() {
-      elem.classList.add('transition');
-      elem.style.transform = '';
-      elem.addEventListener('transitionend', function handler(event) {
-        elem.classList.remove('transition');
-        elem.classList.remove('moving');
+  let changeTop = first.top - last.top;
+  elem.style.transform = 'translateY(' + changeTop + 'px)';
 
-        elem.removeEventListener('transitionend', handler);
-      });
+  requestAnimationFrame(function() {
+    elem.classList.add('transition');
+    elem.style.transform = '';
+    elem.addEventListener('transitionend', function handler(event) {
+      elem.classList.remove('transition');
+      elem.classList.remove('moving');
+
+      elem.removeEventListener('transitionend', handler);
     });
   });
+}
