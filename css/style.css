@@ -15,14 +15,12 @@ body {
   align-items: center;
   z-index: 1;
   top: 0px;
-}
-
-.moving.transition {
   transition: transform 0.75s cubic-bezier(0.13, 0.56, 0.34, 0.85);
+  will-change: transform;
 }
 
-.moved-top {
-  top: -100%;
+.top-cover.animation {
+  transform: translateY(-100%);
 }
 
 .cover-image {
