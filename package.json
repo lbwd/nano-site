@@ -17,6 +17,6 @@
     "regl": "^1.3.9"
   },
   "devDependencies": {
-    "budo": "^11.5.0"
+    "budo": "^11.6.3"
   }
 }
